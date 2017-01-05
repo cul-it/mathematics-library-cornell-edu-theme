@@ -1,0 +1,1 @@
+The style.css file should contain the custom css declarations and default style declarations (i.e. the tag style without class or id assignment).  The default.css file should contain just the default styles.  This file is mainly used for the tinyMCE editor.  The admin.css file contains style tweaks for the administration pages.

@@ -1,0 +1,14 @@
+; $Id:  $
+name = lts
+description = LTS Theme - cuwebtemplate theme derivative
+version = VERSION
+core = 6.x
+base theme = cuwebtemplate
+stylesheets[all][] = lts.css
+
+regions[banner]         = Banner (CU Identity)
+regions[header]         = Header
+regions[content] 		= Content
+regions[right]          = Right sidebar
+regions[left]         	= Left sidebar
+regions[footer]         = Footer

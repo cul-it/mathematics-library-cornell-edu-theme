@@ -1,0 +1,1108 @@
+/****************************************
+ * Cornell University 
+ * Web Template with Two-line Unit Signature Banner
+ * Main CSS Rules
+ ****************************************/
+
+/*
+	This is to include content contributor styles accessible in the menu of the editor.
+	
+	It has been deprecated in favor of the CSS-Injector module which does the same job, but doesn't freak out Drupal when it can't find the file in sites that don't use it.
+
+@import url("/sites/default/files/administrative_items/editor.css");
+*/
+
+
+
+/*
+	The purpose of this stylesheet is to control the layout and formatting
+	of pages throughout the website. Place rules that apply to all pages and 
+	all web browsers in this stylesheet. To provide Internet Explorer v5.x 
+	on Windows with special rules, see hacks/ie5win.css. To provide Internet 
+	Explorer v5.x on Macintosh with special rules, see hacks/ie5mac.css.
+*/
+ 
+/****************************************
+ * General Formatting
+ ****************************************/
+/* 
+	The following rule sets up default global properties, such as
+	font family and color, page margin and padding, and the 
+	background color of the footer.
+	
+	Note the font-size declaration. Its purpose is to reset the 
+	default font size to 10px instead of 16px, allowing font sizes to 
+	be specified in ems throughout the stylesheet (1.0em = 10px, 
+	1.3em = 13px, etc.). It is important to specify font sizes in ems 
+	instead of pixels, because IE/Win does not allow text to be resized
+	by the user if it is specified in pixels.	
+*/ 
+
+ 
+ 
+/* 
+	Headlines 
+	-------------------------
+	Headlines introduce sections of text, and they should be used in a 
+	way that consistently represents the heirarchy of information on a page.
+*/
+ 
+h2 {
+	margin: 0 0 15px 0;
+	font-size: 18px;
+	font-weight: normal;
+	}
+	
+h3 {
+	clear: both;
+	margin: 0 0 15px 0;
+	font-size: 13px;
+	line-height: 14px;
+	font-weight: bold;
+	}
+	
+h4 {
+	margin: 15px 0 3px 0;
+	font-size: 12px;
+	font-weight: bold;
+	}
+	
+/* 
+	Text
+	-------------------------
+	Paragraphs of text, extended quotations, and captions
+*/
+
+p {
+	margin: 0 0 15px 0;
+	font-size: 13px;
+	line-height: 14px;
+	}
+	
+blockquote {
+	margin: 0 30px;
+	}
+	
+	
+/* 
+	Lists 
+	-------------------------
+	Unordered lists (ul) represent a sequence of items in no particular
+	order. They are displayed with a square bullet to the left of each 
+	list item (li).
+	
+	Ordered lists (ol) represent an ordered sequence of items. They are 
+	displayed with a number to the left of each list item (li).
+	
+	Definition lists (dl) represent a set of terms (dt) and definitions (dd).
+	Each term should be followed by one or more definitions. Definition lists
+	are very useful for marking up a series of links, each of which has an
+	explanatory passage of text.
+
+*/
+	
+ul, ol {
+	margin: 0 0 15px 0;
+	padding: 0;
+	font-size: 12px;
+	line-height: 14px;
+	}
+	
+ul ul, ul ol, ol ol, ol ul {
+	}
+	
+ul li {
+	margin: 5px 0 5px 0px;
+	padding: 0 0 0 1em;
+	list-style: none;
+	list-style-image: none;
+	background:	url(../images/layout/bullet.gif) no-repeat 0 .5em;
+	}
+	
+.item-list ul li {list-style-type:none; padding: 0 0 0 1em;}
+	
+ul.tabs li {
+background:none;
+padding:0;
+}
+	
+ul.links li {padding:0 0 0 1em; }	
+
+.views-admin-links ul li {background:none; padding:0;}
+
+li.leaf {
+background:transparent url(../images/layout/bullet.gif) no-repeat 0 .5em;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+padding:0 0 0 1em;
+	}
+
+ 
+ol li {
+	margin: 5px 0 5px 30px;
+	}
+ 
+dl {
+	margin: 0 0 15px 0;
+	line-height: 14px;
+	}
+	
+dt {
+	margin: 0 0 3px 0;
+	font-size: 12px;
+	font-weight: bold;
+	}
+	
+dd {
+	margin: 0 0 15px 0;
+	font-size: 13px;
+	line-height: 14px;
+	}
+	
+/* 
+	Links 
+	-------------------------
+	Links are displayed as dark red text. The underline is replaced by a 
+	lighter bottom border. Visited links have less contrast than unvisited 
+	links. Both visited and unvisited links turn bright red when moused over,
+	and they return to their normal state when selected.
+*/
+
+a {
+	border-bottom: 1px solid #e5cfcf;
+	color: #b31b1b;
+	text-decoration: none;
+	}
+	
+a:visited {
+	color: #b37474;
+	}
+	
+a:hover {
+	color: #f00;
+	border-color: #f00;
+	}
+	
+a:active {
+	color: #b31b1b;
+	border-color: #e5cfcf;	
+	}
+	
+
+ 
+/****************************************
+ * Images
+ ****************************************/
+/*
+	The following set of rules controls the appearance of images.
+	
+	Examples of large photos, small photos, photo captions, and secondary
+	photos can all be found in the two-column template. Examples of 
+	thumbnails can be found in the hub and photo gallery templates.
+*/
+img {
+	border: 0;
+	}
+ 
+
+ 
+/****************************************
+ * Tables
+ ****************************************/
+/*
+	The following rules control the appearance of tables, which are used only
+	for tabular data. To create the appearance of alternating stripes of 
+	background colors on rows of data, use the .row1 and .row2 classes on 
+	<tr> elements.
+	
+	For a detailed example of how to mark up a table, see the 
+	one-column or two-column template.
+*/
+table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 10px;
+	}
+	
+table {
+	margin: 15px 0;
+	border-bottom: 1px solid #e7e7e7;
+	caption-side: bottom;
+	}
+
+thead th {
+	font-weight:bold;
+	font-size:1.4em;}
+	
+th {
+	padding: 0 15px 5px 15px;
+	font-weight: normal;
+	text-align: left;
+	color: #888;
+	}
+	
+td, tbody th {
+	padding: 10px 15px;
+	border-top: 1px solid #e7e7e7;
+	font-size: 11px;
+	line-height: 15px;
+	vertical-align: top;
+	}
+	
+tbody th {
+	font-weight: bold;
+	color: #222;
+	text-align: right;
+	}
+
+	
+tfoot td {
+	font-weight: bold;
+	}
+
+caption {
+	margin: 0 0 15px 0;
+	text-align: left;
+	color: #888;
+	font-size: 11px;
+	}
+	 
+
+
+select, textarea {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 10px;
+	}
+	
+	
+hr {	
+  height: 1px;
+  border: 0px solid gray;
+  }
+  
+  
+  
+  
+
+
+/****************************************
+ * Cornell University 
+ * Web Template with Two-line Unit Signature Banner
+ * Main CSS Rules
+ ****************************************/
+ 
+/*
+	The purpose of this stylesheet is to control the layout and formatting
+	of pages throughout the website. Place rules that apply to all pages and 
+	all web browsers in this stylesheet. To provide Internet Explorer v5.x 
+	on Windows with special rules, see hacks/ie5win.css. To provide Internet 
+	Explorer v5.x on Macintosh with special rules, see hacks/ie5mac.css.
+*/
+ 
+
+body {
+ 	margin: 0;
+	padding: 0;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 63.125%;		/* translate 1.0em to 10px, 1.5em to 15px, etc. */
+	color: #222;
+	background: #d7d6d1;	/* footer background color */
+ 	}
+	
+ 
+/****************************************
+ * Cornell Identity
+ ****************************************/
+/* 
+	The following set of rules controls the appearance of the topmost 
+	banner on the page, including height, background color, and text color.
+	The Cornell identity banner should appear on every page of the site.
+	
+	The version of the logo that appears in the XHTML code is hidden from 
+	browsers that can read this stylesheet, and it is replaced by a version
+	of the logo that corresponds to the background color of the banner. 
+	This logo is placed in the background of two elements below (rather than
+	one) to prevent flickering when moused over by IE/Win users who have 
+	disabled the browser cache.
+*/
+
+
+/*
+	-------------------------
+	75px Banner
+	-------------------------
+*/
+
+#cu-identity.seventy-five-px {
+	height: 75px;
+	background: #68645b;
+	/*
+	Comment out the following line to remove the Ezra Cornell background image from the header.
+	Change 1.jpg to any number up to 8.jpg to use other header background images.
+	*/
+	background: #68645b url(../images/layout/header_bg/1.jpg) no-repeat top center;
+	}
+
+.seventy-five-px #cu-logo {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -445px;
+	width: 890px;
+	height: 75px;
+	background: url(../images/layout/unit_signature.gif) no-repeat -8px -1px;
+	}
+	
+.seventy-five-px #cu-logo a {
+	position: absolute;
+	display: block;
+	border: none;
+	/* hide text link */
+	text-indent: -1000em; 
+	}
+	
+.seventy-five-px #insignia-link {
+	width: 68px;
+	height: 75px;
+	}
+
+.seventy-five-px #unit-signature-links a {
+	left: 68px;
+	width: 195px;
+	}
+
+.seventy-five-px #cornell-link {
+	height: 38px;
+	}
+	
+.seventy-five-px #unit-link {
+	top: 38px;
+	height: 37px;
+	}
+	
+.seventy-five-px #cu-logo img {
+	display: none;
+	}
+ 
+/*	
+	Search Form
+	-------------------------
+	The following rules control the appearance of the search form interface. 
+	The form is displayed in the Cornell banner, and it is aligned with the 
+	right edge of the page. The search form should appear on every page 
+	of a site. 
+*/
+
+.seventy-five-px #cu-identity-search-form {
+	position: absolute;
+	top: 18px;
+	right: 50%;
+	margin-right: -445px;
+	}
+	
+.seventy-five-px #cu-identity-search-form form {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	}
+	
+.seventy-five-px #cu-identity-search-form label {
+	color: #fff;
+	}
+	
+.seventy-five-px #cu-identity-search-form-query {
+	padding: 3px;
+	width: 145px;
+	border: none;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #fff;
+	background: #5e5a52 url(../images/layout/header_search.gif) no-repeat top left;
+	vertical-align: middle;
+	}
+	
+.seventy-five-px #cu-identity-search-form-submit {
+	padding: 0px 2px 3px 2px;;
+	border-top: 1px solid #a6a295;
+	border-left: 1px solid #a6a295;
+	border-right: 1px solid #403000;
+	border-bottom: 1px solid #403000;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #fff;
+	background: #59544b;
+	vertical-align: middle;
+	}
+	
+.seventy-five-px #cu-identity-search-filters {
+	margin: 5px 0 0 0;
+	}
+
+.seventy-five-px #cu-identity-search-filters input {
+	vertical-align: middle;
+	margin: 0;
+	}
+
+.seventy-five-px #cu-identity-search-filters label {
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+	}
+	
+.seventy-five-px #cu-identity-search-form a {
+	color: #fff;
+	border-bottom: 1px solid #999;
+	}
+	
+.seventy-five-px #cu-identity-search-form a:hover {
+	border-bottom: 1px solid #fff;
+	}
+ 
+/*	
+	Search Navigation 
+	-------------------------
+	The following rules control the appearance of the search navigation 
+	links. These links are displayed horizontally in the Cornell banner, 
+	and they are aligned with the right edge of the page. The baseline
+	of the links is aligned with the baseline of the unit name in the unit
+	signature. Search navigation links should appear on every page of a
+	site. 
+*/
+
+.seventy-five-px #cu-identity-search-navigation {
+	position: absolute;
+	top: 37px;
+	right: 50%;
+	margin-right: -445px;
+	}
+	
+.seventy-five-px #cu-identity-search-navigation ul {
+	margin: 0;
+	padding: 0;
+	font-size: 1.1em;
+	}
+	
+.seventy-five-px #cu-identity-search-navigation li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background: none;
+	list-style-image:none;
+	}
+		
+.seventy-five-px #cu-identity-search-navigation a {
+	float: left;
+	padding: 5px 15px;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	}
+	
+.seventy-five-px #cu-identity-search-navigation a:hover {
+	background: #444;
+	}
+
+
+
+/*
+	-------------------------
+	45px Banner 
+	-------------------------
+*/
+
+#cu-identity.forty-five-px {
+	height: 45px;
+	background: #68645b;
+	}
+
+.forty-five-px #cu-logo {
+	margin: 0 auto;
+	width: 890px;
+	background: url(../images/layout/cu_logo.gif) no-repeat top left;
+	}
+	
+.forty-five-px #cu-logo a {
+	border: none;
+	display: block;
+	width: 180px;
+	height: 45px;
+	background: url(../images/layout/cu_logo.gif) no-repeat top left;
+	}
+	
+.forty-five-px #cu-logo img {
+	display: none;
+	}
+	
+.forty-five-px #cu-search {
+	position: absolute;
+	top: 11px; 
+	right: 50%;
+	width: 200px;
+	margin-right: -445px;
+	}
+	
+.forty-five-px #cu-search a {
+	float: right;
+	padding: 5px 15px;
+	font-size: 1.1em;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	}
+	
+.forty-five-px #cu-search a:hover {
+	background: #444;
+	}
+
+
+/****************************************
+ * Forms
+ ****************************************/
+/*
+	The following rules control the appearance of forms.
+	
+	Related sections of form inputs should be organized in fieldsets. 
+	Each fieldset should contain a series of .form-pair divs. Each
+	.form-pair should contain a .form-item div and a .form-value div. The 
+	.form-item should contain a <label> for the <input> or <select> 
+	found in the .form-value.
+	
+	For a detailed example of how to mark up a form, see the 
+	one-column or two-column template.
+*/
+#cu-identity-search-form form {
+	float: left;
+	margin: 5px 0 15px 0;
+	padding: 0;
+	width: 510px;
+	}
+	
+	
+	
+	
+	 
+/****************************************
+ * Header
+ ****************************************/
+ 
+/* 
+	Section Title 
+	-------------------------
+	The following rules control the formatting of the section title, including
+	padding, font family, size, weight, color.
+*/
+ 
+#identity {
+	float: left;
+	width: 100%;
+	padding: 15px 0;
+	background: #fff;
+	}
+ 
+#identity h1 {
+	margin: 0 auto;
+	width: 890px;
+	font-family: georgia, "times new roman", times, serif;
+	font-size: 2.4em;
+	font-weight: normal;
+	color: #73736c;
+	} 
+		
+/*
+	Main Navigation 
+	-------------------------
+	The following rules control the appearance of the main navigation links.
+	These links are displayed in a horizontal band with a gray background. 
+	Main navigation should appear on every page of a site.
+*/
+
+#header {
+	float: left;
+	width: 100%;
+	background: #b3b3aa;
+	}
+	
+#primary-links {
+	margin: 0 auto;
+	width: 890px;
+	}
+	
+#primary-links ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-left: 1px solid #a6a69d;
+	width: 889px;
+	font-size: 1em;
+	}
+	
+#primary-links li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	background: none;
+	}
+	
+#primary-links a {
+	float: left;
+	padding: 7px 20px;
+	border: none;
+	border-right: 1px solid #a6a69d;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	}
+	
+#primary-links a:hover {
+	background: #a6a69d;
+	}
+
+
+
+
+/****************************************
+ * Breadcrumbs
+ ****************************************/
+ 
+#breadcrumbs {
+	float: left;
+	width: 100%;
+	background:#e6e6e6;
+	border-top: 1px solid #b3b3aa;
+	padding: 0 0;
+	
+	}
+
+
+.wrapper  {
+	margin: 0 auto;
+	width: 890px;
+	padding: 3px 0 3px 0;
+	}
+	
+
+	
+/*		
+#primary-links ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-left: 1px solid #a6a69d;
+	width: 739px;
+	font-size: 1em;
+	}
+	
+#primary-links li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	background: none;
+	}
+	
+#primary-links a {
+	float: left;
+	padding: 7px 20px;
+	border: none;
+	border-right: 1px solid #a6a69d;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	}
+	
+#primary-links a:hover {
+	background: #a6a69d;
+	}
+*/	
+	
+	
+	
+/****************************************
+ * Content Sections
+ ****************************************/
+/*
+	The following set of rules controls the most general layout elements 
+	used throughout the templates. Every page must have these elements, 
+	with the exception of #section-navigation and #secondary, which are 
+	only required on two-column pages.
+	
+	The #wrap element is used to apply the beige background color to the
+	main body of the page. #content is used to specify that the page is 
+	890px wide and centered. #main and #secondary are the right and left
+	vertical columns of content, respectively (one-column pages only use
+	#main, which occupies the entire width).
+*/
+#wrap {
+	float: left;
+	width: 100%;
+	background: #f0eee4;
+	}
+ 
+#content {
+	margin: 0 auto;
+	width: 890px;
+	}
+	
+#main {
+	float: right;
+	padding: 20px 0;
+	width: 100%;
+	}
+	
+/* two-column pages */
+
+.left-sidebar #wrap {
+	/* see IE6/Win hack at bottom */
+	background: #f0eee4 url(../images/layout/left_sidebar_bg.gif) repeat-y top center;
+	}
+	
+.right-sidebar #wrap {
+	/* see IE6/Win hack at bottom */
+	background: #f0eee4 url(../images/layout/right_sidebar_bg.gif) repeat-y top center;
+	}
+	
+.sidebars #wrap {
+	/* see IE6/Win hack at bottom */
+	background: #f0eee4 url(../images/layout/sidebars_bg.gif) repeat-y top center;
+	}
+	
+.left-sidebar #main, .right-sidebar #main {
+	float: right;
+	width: 620px;
+	}
+	
+.sidebars #main {
+	float: right;
+	width: 466px;
+	}
+
+ 
+/****************************************
+ * Secondary Navigation
+ ****************************************/
+/*
+	The following set of rules controls the appearance of section navigation,
+	which is used on two-column pages. Section navigation is displayed as a 
+	vertical stack of links at the top of the left sidebar of a two-column page.
+	
+	For a detailed example of section navigation, see the two-column template.
+*/
+.left-sidebar #secondary-links, .right-sidebar #secondary-links, #secondary-links {
+	margin-bottom: 5px;
+	float: left;
+	clear: left;
+	width: 250px;
+	}
+	
+.sidebars #secondary-links {
+	margin-bottom: 5px;
+	float: left;
+	clear: left;
+	width: 200px;
+	}
+ 
+#secondary-links ul {
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	}
+	
+#secondary-links li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: none;
+	}
+	
+#secondary-links a {
+	display: block;
+	padding: 10px;
+	border: none;	
+	width: 230px;
+	border-bottom: 2px solid #f4f4ef;
+	}
+	
+#secondary-links a:visited {
+	color: #b31b1b;
+	}
+		
+#secondary-links a:hover {
+	background: #f2f7fa;
+	color: #f00;
+	}
+	
+#secondary-links a:active {
+	color: #b31b1b;
+	background: none;
+	}
+ 
+
+	
+
+
+/****************************************
+ * Left Sidebar
+ ****************************************/
+
+.sidebars #left-sidebar {
+	color: #666;
+	float: left;
+	clear: left;
+	width: 200px;
+	}
+	
+.left-sidebar #left-sidebar {
+	color: #666;
+	float: left;
+	clear: left;
+	width: 250px;
+	
+	}
+
+.left-sidebar-block {
+	margin: 15px 0 10px 0;
+	padding: 5px 15px;
+	}
+	
+#left-sidebar-block-first {
+	margin-top: 25px;
+	}
+	
+#left-sidebar h2 {
+	margin: 0 0 5px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	}
+	
+#left-sidebar h3 {
+	margin: 0 0 5px 0;
+	font-size: 1.1em;
+	font-weight: bold;
+	}
+	
+#left-sidebar p {
+	margin: 0 0 10px 0;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	}
+	
+#left-sidebar ul {
+	font-size: 11px;
+	padding: 0 0 0 8px;
+	}
+	
+#left-sidebar ul li {
+	margin: 2px 0 2px 5px;
+	padding: 0 0 0 10px;
+	}
+	
+#left-sidebar ul li.leaf {
+	list-style: none;
+	list-style-image: none;
+	background: url(../images/layout/bullet.gif) no-repeat top left 0 .5em;
+	padding: 0 0 0 10px;
+	}
+	
+#left-sidebar ul li.expanded { 
+list-style-image:none;
+background: url(../images/layout/menu-expanded.png) no-repeat 0 .4em;
+list-style-type:none;
+padding: 0 0 0 1em;
+}	
+
+#left-sidebar ul li.collapsed { 
+list-style-image:none;
+background: url(../images/layout/menu-collapsed.png) no-repeat 0 .4em;
+list-style-type:none;
+padding: 0 0 0 1em;
+}	
+
+
+
+
+
+/****************************************
+ * Right Sidebar
+ ****************************************/
+
+.sidebars #right-sidebar {
+	color: #666;
+	float: right;
+	width: 200px;
+	margin:0 0 0 10px;
+	}
+	
+.right-sidebar #right-sidebar {
+	color: #666;
+	float: right;
+	width: 250px;
+	margin:0 0 0 10px;
+	}
+
+.right-sidebar-block {
+	margin: 15px 0 10px 0;
+	padding: 5px 5px;
+	}
+	
+#right-sidebar-block-first {
+	margin-top: 25px;
+	}
+	
+#right-sidebar h2 {
+	margin: 0 0 5px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	}
+	
+#right-sidebar h3 {
+	margin: 0 0 5px 0;
+	font-size: 1.1em;
+	font-weight: bold;
+	}
+	
+#right-sidebar p {
+	margin: 0 0 10px 0;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	}
+	
+#right-sidebar ul {
+	font-size: 11px;
+	padding: 0 0 0 8px;
+	}
+	
+#right-sidebar ul li {
+	margin: 2px 0 2px 5px;
+	padding: 0 0 0 10px;
+	}
+	
+#right-sidebar ul li.leaf {
+	list-style: none;
+	list-style-image: none;
+	background: url(../images/layout/bullet.gif) no-repeat top left 0 .5em;
+	padding: 0 0 0 10px;
+	}
+
+#right-sidebar ul li.expanded { 
+list-style-image:none;
+background: url(../images/layout/menu-expanded.png) no-repeat 0 .4em;
+list-style-type:none;
+padding: 0 0 0 1em;
+}	
+
+#right-sidebar ul li.collapsed { 
+list-style-image:none;
+background: url(../images/layout/menu-collapsed.png) no-repeat 0 .4em;
+list-style-type:none;
+padding: 0 0 0 1em;
+}	
+
+
+ 
+/****************************************
+ * Footer
+ ****************************************/
+/* 
+	The following rules control the appearance of the footer found at the 
+	bottom of every page. The footer contains the Cornell University copyright,
+	which is displayed in a small font size. The color of the bottom border
+	of the link in the footer is darker than most links to provide adequate 
+	contrast with the background color of the footer.
+*/
+ 
+#footer {
+	float: left;
+	width: 100%;
+	}
+	
+#footer-content {
+	margin: 0 auto;
+	padding: 15px 0 25px 0;
+	width: 890px;
+	font-size: 1.0em;
+	color: #333;
+	}
+	
+/* links */
+
+#footer a {
+	border-bottom: 1px solid #ccadad;
+	}
+	
+#footer a:active {
+	border-color: #ccadad;	
+	}
+ 
+/****************************************
+ * Miscellaneous
+ ****************************************/
+
+/* 
+	Hide "skip to content" link from general users. 
+	Do not use display: none, as that will also hide it from some screen readers.
+*/
+#skipnav {
+	position: absolute;
+	top: -1000em;
+	left: -1000em;
+	}
+	
+/*
+	Assign the hidden class to make an element invisible to the browser
+*/	
+.hidden {
+	display: none;
+	}
+ 
+/****************************************
+ * IE6/Windows Hacks
+ ****************************************/
+ 
+/*
+	Shifting Background Bug:
+	IE/Windows calculates "center" (for a background image position) differently
+	than it does "50%" or "margin: 0 auto" (for foreground content) when the 
+	page is an odd number of pixels wide.
+*/
+ 
+.left-sidebar #content {
+	background: #f0eee4 url(../images/layout/left_sidebar_bg.gif) repeat-y top center;
+	}
+	
+.right-sidebar #content {
+	background: #f0eee4 url(../images/layout/right_sidebar_bg.gif) repeat-y top center;
+	}
+	
+.sidebars #content {
+	background: #f0eee4 url(../images/layout/sidebars_bg.gif) repeat-y top center;
+	}
+ 
+ 
+.left-sidebar #wrap, .right-sidebar #wrap, .sidebars #wrap {
+	background: #f0eee4;
+	}
+	
+	
+	
+
+/* unhack for other browsers */
+.left-sidebar>#wrap {
+	background: #f0eee4 url(../images/layout/left_sidebar_bg.gif) repeat-y top center;
+	}
+	
+.right-sidebar>#wrap {
+	background: #f0eee4 url(../images/layout/right_sidebar_bg.gif) repeat-y top center;
+	}
+	
+.sidebars>#wrap {
+	background: #f0eee4 url(../images/layout/sidebars_bg.gif) repeat-y top center;
+	}
+	
+	
+		
